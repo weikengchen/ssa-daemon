@@ -837,7 +837,7 @@ void connect_cb(tls_daemon_ctx_t* ctx, unsigned long id, struct sockaddr* int_ad
 		netlink_notify_kernel(ctx, id, -EINPROGRESS);
 	}
 
-	netlink_notify_kernel(ctx, id, 0);
+//	netlink_notify_kernel(ctx, id, 0);
 
 	return;
 }
