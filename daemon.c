@@ -836,6 +836,9 @@ void connect_cb(tls_daemon_ctx_t* ctx, unsigned long id, struct sockaddr* int_ad
 		log_printf(LOG_INFO, "Nonblocking connect requested\n");
 		netlink_notify_kernel(ctx, id, -EINPROGRESS);
 	}
+
+	netlink_notify_kernel(ctx, id, 0);
+
 	return;
 }
 
